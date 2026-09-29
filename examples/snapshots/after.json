@@ -1,0 +1,151 @@
+{
+  "label": "after",
+  "taken_at": "2026-09-27T01:42:37-06:00",
+  "from_host": "engineer-laptop",
+  "results": [
+    {
+      "name": "Google",
+      "kind": "ping",
+      "target": "www.google.com",
+      "up": true,
+      "latency_ms": 13.0,
+      "detail": "0% loss",
+      "extra": {
+        "group": "internet",
+        "loss_pct": 0.0
+      }
+    },
+    {
+      "name": "Google",
+      "kind": "https",
+      "target": "https://www.google.com",
+      "up": true,
+      "latency_ms": 193.4,
+      "detail": "HTTP 200",
+      "extra": {
+        "group": "internet",
+        "status": 200,
+        "cert_days_left": 61
+      }
+    },
+    {
+      "name": "Google DNS",
+      "kind": "ping",
+      "target": "8.8.8.8",
+      "up": true,
+      "latency_ms": 12.4,
+      "detail": "0% loss",
+      "extra": {
+        "group": "internet",
+        "loss_pct": 0.0
+      }
+    },
+    {
+      "name": "Google DNS",
+      "kind": "tcp",
+      "target": "8.8.8.8:53",
+      "up": true,
+      "latency_ms": 12.7,
+      "detail": "port open",
+      "extra": {
+        "group": "internet"
+      }
+    },
+    {
+      "name": "Cloudflare DNS",
+      "kind": "ping",
+      "target": "1.1.1.1",
+      "up": true,
+      "latency_ms": 10.1,
+      "detail": "0% loss",
+      "extra": {
+        "group": "internet",
+        "loss_pct": 0.0
+      }
+    },
+    {
+      "name": "Cloudflare DNS",
+      "kind": "https",
+      "target": "https://1.1.1.1",
+      "up": true,
+      "latency_ms": 101.1,
+      "detail": "HTTP 200",
+      "extra": {
+        "group": "internet",
+        "status": 200,
+        "cert_days_left": 203
+      }
+    },
+    {
+      "name": "Branch gateway",
+      "kind": "ping",
+      "target": "192.0.2.1",
+      "up": true,
+      "latency_ms": 1.3,
+      "detail": "0% loss",
+      "extra": {
+        "group": "internal",
+        "loss_pct": 0.0
+      }
+    },
+    {
+      "name": "ERP portal",
+      "kind": "https",
+      "target": "https://erp.lab.example/login",
+      "up": true,
+      "latency_ms": 327.6,
+      "detail": "HTTP 200 + text found",
+      "extra": {
+        "group": "internal",
+        "status": 200
+      }
+    },
+    {
+      "name": "File server",
+      "kind": "ping",
+      "target": "192.0.2.40",
+      "up": true,
+      "latency_ms": 0.9,
+      "detail": "0% loss",
+      "extra": {
+        "group": "internal",
+        "loss_pct": 0.0
+      }
+    },
+    {
+      "name": "File server",
+      "kind": "tcp",
+      "target": "192.0.2.40:445",
+      "up": false,
+      "latency_ms": null,
+      "detail": "TimeoutError",
+      "extra": {
+        "group": "internal"
+      }
+    },
+    {
+      "name": "Print server",
+      "kind": "ping",
+      "target": "192.0.2.45",
+      "up": true,
+      "latency_ms": 1.5,
+      "detail": "0% loss",
+      "extra": {
+        "group": "internal",
+        "loss_pct": 0.0
+      }
+    },
+    {
+      "name": "New VLAN gateway",
+      "kind": "ping",
+      "target": "192.0.2.129",
+      "up": true,
+      "latency_ms": 1.3,
+      "detail": "0% loss",
+      "extra": {
+        "group": "internal",
+        "loss_pct": 0.0
+      }
+    }
+  ]
+}

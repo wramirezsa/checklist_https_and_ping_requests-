@@ -1,0 +1,48 @@
+# Copy to targets.yml and add the services that matter for the work you are about to do.
+# targets.yml is in .gitignore so client hostnames never end up in the repository.
+#
+# Per target:
+#   name      label in the report
+#   host      hostname or IP (used by ping and tcp)
+#   ping      true to ping 'host' (or a different address as a string)
+#   url       http(s) URL to request
+#   expect    accepted HTTP status codes (default: 200, 30x, 401, 403)
+#   contains  text that must appear in the page
+#   tcp       list of ports that must accept a connection
+#   insecure  true to skip TLS verification (internal apps with self-signed certificates)
+
+groups:
+  internet:
+    - name: Google
+      host: www.google.com
+      ping: true
+      url: https://www.google.com
+
+    - name: Google DNS
+      host: 8.8.8.8
+      ping: true
+      tcp: [53]
+
+    - name: Cloudflare DNS
+      host: 1.1.1.1
+      ping: true
+      url: https://1.1.1.1
+      tcp: [53]
+
+  # Add your own groups and targets below. Examples:
+  internal:
+    # - name: YOUR_GATEWAY_NAME
+    #   host: YOUR_GATEWAY_IP
+    #   ping: true
+    #
+    # - name: YOUR_APP_NAME
+    #   host: YOUR_APP_HOST
+    #   url: https://YOUR_APP_URL/login
+    #   expect: [200]
+    #   contains: "Sign in"
+    #   insecure: true
+    #
+    # - name: YOUR_FILE_SERVER
+    #   host: YOUR_SERVER_IP
+    #   ping: true
+    #   tcp: [445, 3389]

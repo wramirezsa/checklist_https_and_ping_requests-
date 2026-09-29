@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+/output/
+# never commit real inventories, captures or credentials
+inventory.yml
+*.env
+.env
+captures-real/
+/snapshots/
+targets.yml

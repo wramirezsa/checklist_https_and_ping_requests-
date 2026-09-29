@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Service check - Sample change window (fictional)</title>
+<style>
+ body{font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:1100px;margin:0 auto;padding:40px 24px;color:#1f2937}
+ h1{font-size:26px;margin:0 0 4px} h2{font-size:18px;margin:32px 0 12px;border-bottom:2px solid #e5e7eb;padding-bottom:6px}
+ table{width:100%;border-collapse:collapse;font-size:13px} th{text-align:left;background:#f9fafb;padding:8px;border-bottom:2px solid #e5e7eb}
+ td{padding:6px 8px;border-bottom:1px solid #f3f4f6;vertical-align:top} code{font-size:12px}
+ .meta{color:#6b7280;font-size:14px} .cards{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+ .card{border:1px solid #e5e7eb;border-radius:6px;padding:10px 16px;min-width:150px} .card b{display:block;font-size:26px;line-height:1.1}
+ .card span{font-size:13px;color:#374151} .verdict{font-size:17px;font-weight:600}
+</style></head><body>
+<h1>Service check: before and after</h1>
+<p class="meta">Sample change window (fictional)<br>Before: 2026-09-26T22:00:04-06:00 from engineer-laptop &middot;
+After: 2026-09-27T01:42:37-06:00 from engineer-laptop</p>
+<p class="verdict">1 service(s) that were up before the work are down now.</p>
+<div class="cards"><div class="card"><b style="color:#991b1b">1</b><span>DOWN after work</span></div><div class="card"><b style="color:#166534">1</b><span>recovered</span></div><div class="card"><b style="color:#1d4ed8">1</b><span>new check</span></div><div class="card"><b style="color:#166534">9</b><span>still up</span></div></div>
+<h2>Every check</h2>
+<table><thead><tr><th>Change</th><th>Group</th><th>Check</th><th>Type</th><th>Target</th><th>Before</th><th>After</th></tr></thead>
+<tbody><tr><td style="color:#991b1b;font-weight:600">DOWN after work</td><td>internal</td><td>File server</td><td>tcp</td><td><code>192.0.2.40:445</code></td><td>UP 1 ms (port open)</td><td>DOWN (TimeoutError)</td></tr><tr><td style="color:#166534;font-weight:600">recovered</td><td>internal</td><td>Print server</td><td>ping</td><td><code>192.0.2.45</code></td><td>DOWN (100% loss)</td><td>UP 2 ms (0% loss)</td></tr><tr><td style="color:#1d4ed8;font-weight:600">new check</td><td>internal</td><td>New VLAN gateway</td><td>ping</td><td><code>192.0.2.129</code></td><td>-</td><td>UP 1 ms (0% loss)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internal</td><td>Branch gateway</td><td>ping</td><td><code>192.0.2.1</code></td><td>UP 1 ms (0% loss)</td><td>UP 1 ms (0% loss)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internal</td><td>ERP portal</td><td>https</td><td><code>https://erp.lab.example/login</code></td><td>UP 312 ms (HTTP 200 + text found)</td><td>UP 328 ms (HTTP 200 + text found)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internal</td><td>File server</td><td>ping</td><td><code>192.0.2.40</code></td><td>UP 1 ms (0% loss)</td><td>UP 1 ms (0% loss)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internet</td><td>Cloudflare DNS</td><td>https</td><td><code>https://1.1.1.1</code></td><td>UP 96 ms (HTTP 200)</td><td>UP 101 ms (HTTP 200)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internet</td><td>Cloudflare DNS</td><td>ping</td><td><code>1.1.1.1</code></td><td>UP 10 ms (0% loss)</td><td>UP 10 ms (0% loss)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internet</td><td>Google</td><td>https</td><td><code>https://www.google.com</code></td><td>UP 184 ms (HTTP 200)</td><td>UP 193 ms (HTTP 200)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internet</td><td>Google</td><td>ping</td><td><code>www.google.com</code></td><td>UP 12 ms (0% loss)</td><td>UP 13 ms (0% loss)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internet</td><td>Google DNS</td><td>ping</td><td><code>8.8.8.8</code></td><td>UP 12 ms (0% loss)</td><td>UP 12 ms (0% loss)</td></tr><tr><td style="color:#166534;font-weight:600">still up</td><td>internet</td><td>Google DNS</td><td>tcp</td><td><code>8.8.8.8:53</code></td><td>UP 12 ms (port open)</td><td>UP 13 ms (port open)</td></tr></tbody></table>
+</body></html>
